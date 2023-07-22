@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <form id="forms">
+        <h1>ENQUIRY</h1>
+
+        <p class="hide" id="success">Thanks for contacting us.</p>
+
+        <div class="frm-ctr">
+            <label class="lbl" for="name">Name<span>*</span></label>
+            <input type="text" class="lbl" id="name" placeholder="Enter your fullname" />
+            <p id="nameError" class="hide">Name is Required</p>
+            <p class="hide" id="nameLengthError">Name must be at keast 3 characters long</p>
+        </div>
+
+        <div class="frm-ctr">
+            <label class="lbl" for="mail">Email<span>*</span></label>
+            <input type="email" class="lbl" id="mail" placeholder="abc@gmail.com" />
+            <p id="mailError" class="hide">Mail-ID is Required</p>
+            <p class="hide" id="emailFormatError">Give Email iin correct format</p>
+        </div>
+
+        <div class="frm-ctr">
+            <label class="lbl" for="phnum">Mobile Number<span>*</span></label>
+            <input class="lbl" id="phnum" placeholder="Enter Your 10 digits Mobile Number" />
+            <p id="numError" class="hide">Mobile Number is Required</p>
+            <p class="hide" id="mobileNumberLengthError">Give Mobile number in correct format</p>
+        </div>
+
+        <div class="frm-ctr">
+            <label class="lbl" for="msg">Message</label>
+            <input type="text" class="lbl" id="msg" placeholder="Write about our service" />
+        </div>
+
+        <div class="frm-ctr">
+            <label class="lbl" for="course-dropdown"> Select a Course <span>*</span></label>
+            <select id="course-dropdown" class="lbl">
+                <option value="-1">Please select an option</option>
+                <option value="2">UI/UX</option>
+                <option value="3">Front-End</option>
+                <option value="4">Back-End</option>
+                <option value="5">Database</option>
+            </select>
+            <p id="courseError" class="hide">Selecting a course is Required</p>
+        </div>
+
+        <button id="btn" class="btn-element lbl" type="submit">Save Details </button>
+    </form>
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+
+</html>
+
+<!-- text - name user id  == maxlength="3" minlength="15"  -->
+
+<!-- number - ph no, date , year == max="" min="for mobile number"  -->
+
+<!-- compulsory == required -->
+
+<!-- pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$" title = "least 1 lower case, uppercase, number, special symbol, string range 8-16" -->
+
+
+
+ <!-- Re = (?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}
+
+(?=.*[a-z]) - At least one lowercase letter(a - z).
+
+(?=.*[A-Z]) - At least one uppercase letter(A - Z).
+
+(?=.*[0-9]) - At least one numeric value(0-9).
+
+(?=.*[!@#$%^&*_=+-]) - At least one special symbol(!@#$%^&*=+-_)
+
+{8,16} -> The total length should be greater than or equal to 8 and less or equal to 16. -->
