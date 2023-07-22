@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="./form.css">
+</head>
+
+<body>
+    <section>
+        <form class="main">
+            <h1>Profile Details</h1>
+
+            <div class="container">
+                <label for="name" class="lbl">Name:</label>
+                <input type="text" id="name" maxlength="15" minlength="3" required>
+            </div>
+
+            <div class="container">
+                <label for="mail" class="lbl">Mail-ID:</label>
+                <input type="email" id="mail" required>
+            </div>
+
+            <div class="container">
+                <label for="pwd" class="lbl">Password:</label>
+                <input type="password" id="pwd" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$"
+                    title="least 1 lower case, uppercase, number, special symbol, string range 8-16">
+            </div>
+
+            <div class="container">
+                <label for="phno" class="lbl">Mobile Number:</label>
+                <input id="phno" type="text" required pattern="[1-9]{1}[0-9]{9}">
+            </div>
+
+            <!-- <input id="phoneInput" type="tel"/> -->
+
+            <div class="container">
+                <h3>Gender</h3>
+                <input type="radio" id="Male" name="gender" value="Male">
+                <label for="Male" class="lbl1">Male</label>
+                <input type="radio" id="Female" name="gender" value="Female">
+                <label for="Female" class="lbl1">Female</label>
+            </div>
+
+            <div class="container">
+                <h3>Skills</h3>
+                <input type="checkbox" id="frontEnd" value="frontEnd">
+                <label for="frontEnd" class="lbl1">Front-End</label>
+                <input type="checkbox" id="backEnd" name="backEnd" value="backEnd">
+                <label for="backEnd2" class="lbl1">Back-End</label>
+                <input type="checkbox" id="testing" name="testing" value="testing">
+                <label for="testing" class="lbl1">Testing</label>
+            </div>
+
+            <div class="container">
+                <h3>Experience</h3>
+                <select id="course-dropdown">
+                    <option value="-1">Please select an option</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3+">3+</option>
+                </select>
+            </div>
+
+            <input class="btn" type="submit">
+
+        </form>
+    </section>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(45deg, rgb(165, 64, 247), rgb(255, 255, 255), rgb(203, 115, 238));
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+.main {
+    display: flex;
+    align-items: center;
+    margin: 1o5px 0px;
+    justify-content: center;
+    flex-direction: column;
+    border: 4px solid black;
+    margin-left: 355px;
+    margin-right: 355px;
+    padding: 125px 0px;
+
+}
+.container {
+    padding: 25px 0px 0px 0px;
+    display: flex;
+}
+.lbl {
+    padding-right: 15px;
+}
+h3 {
+    padding-right: 15px;
+}
+.lbl1 {
+    padding-left: 7px;
+    padding-right: 15px;
+}
+.btn {
+    margin-top: 10px;
+    padding: 8px 35px;
+    font-size: large;
+    font-weight: bold;
+    border: 2px solid brown;
+}
+    </style>
+</body>
+
+</html>
